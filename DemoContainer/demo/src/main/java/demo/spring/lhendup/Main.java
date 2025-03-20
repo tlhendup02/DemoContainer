@@ -16,7 +16,7 @@ public class Main {
         // Getting the object                                                                    
         Alien obj =  (Alien) context.getBean("alien");
         // obj.code();
-        System.out.println(obj.getAge());
+        // System.out.println(obj.getAge());
 
         // Alien obj1 =  (Alien) context.getBean("alien");
         // obj1.code();

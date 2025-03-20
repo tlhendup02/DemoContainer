@@ -5,9 +5,12 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-    <bean id="alien" class="demo.spring.lhendup.Alien" scope="prototype">
-     <property name="age" value="23"></property>
+    <bean id="alien" class="demo.spring.lhendup.Alien" autowire="byType">
+     <property name="age" value="23">
+        <bean id="laptop" class="demo.spring.lhendup.Laptop"></bean>
+     </property> 
+     <!-- <property name="lap" ref="desk"></property>  -->
     </bean>
-    <bean id="laptop" class="demo.spring.lhendup.Laptop"></bean>
-
+    <!-- <bean id="laptop" class="demo.spring.lhendup.Laptop" lazy-init="true"></bean>
+    <bean id="desktop" class="demo.spring.lhendup.Desktop" primary="true"></bean> -->
 </beans>
